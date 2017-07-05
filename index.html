@@ -14,29 +14,6 @@
 <body>
 
 
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '237120993473659',
-                cookie: true,
-                xfbml: true,
-                version: 'v2.8'
-            });
-            FB.AppEvents.logPageView();
-        };
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
     <div class="container">
         <div class="row">
             <div class="col-lg-offset-1 col-lg-6">
@@ -48,13 +25,17 @@
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-6" id="elementos"></div>
             </div>
+            <div class="row">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+            </div>
 
         </div>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="assets/js/main.js">
-        </script>
+        <script src="assets/js/facejs.js"></script>
+        <script src="assets/js/main.js"></script>
 
 </body>
 
